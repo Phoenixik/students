@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="/css/home.css" rel="stylesheet">
+</head>
+<body>
+<H1 align="center">Phoenix live</H1>
+<div align="center">
+    <form  th:object="${stud}" th:action="@{/update}" method="post">
+
+        <input hidden type="text" th:field="*{id}"> </input> <br><br>
+
+        <p>name: <input type="text" th:field="*{name}"> </input> </p><br><br>
+        <p>Your number: <input type="number" th:field="*{mobile}"> </input> </p><br><br>
+        <p>Your Country : <input type="text" th:field="*{country}"> </input> </p><br><br>
+        <p> <input type="submit" value="submit"> </input> </p>
+
+
+    </form>
+</div>
+</body>
+</html>
